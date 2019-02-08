@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+	id "me.champeau.gradle.jmh" version "0.4.8"
+}
+
+group 'com.izeye.samples'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	jmh 'org.openjdk.jmh:jmh-core:latest.release'
+	jmh 'org.openjdk.jmh:jmh-generator-annprocess:latest.release'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+wrapper {
+	gradleVersion = '5.2'
+}
+
+jmh {
+	fork = 1
+	warmupIterations = 1
+	iterations = 1
+}
