@@ -15,8 +15,11 @@ repositories {
 dependencies {
 	jmh 'org.openjdk.jmh:jmh-core:latest.release'
 	jmh 'org.openjdk.jmh:jmh-generator-annprocess:latest.release'
+	
+	jmh 'org.springframework:spring-core:5.1.5.RELEASE'
 
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+	testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 wrapper {
