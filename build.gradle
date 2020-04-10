@@ -30,4 +30,6 @@ jmh {
 	fork = 1
 	warmupIterations = 1
 	iterations = 1
+	profilers = ['gc']
+	include = ['com.izeye.samples.jmh.ByteArrayOutputStreamBenchmark']
 }
