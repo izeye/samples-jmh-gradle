@@ -33,6 +33,11 @@ public class SpringStringUtilsDeleteAnyBenchmark {
 		return deleteAnyPatched("key1=value1 ", "\"");
 	}
 
+	@Benchmark
+	public String patchedSkipNewStringWhenNothingDeleted() {
+		return deleteAnyPatchedSkipNewStringWhenNothingDeleted("key1=value1 ", "\"");
+	}
+
 	private static String deleteAny(String inString, String charsToDelete) {
 		StringBuilder sb = new StringBuilder(inString.length());
 		for (int i = 0; i < inString.length(); i++) {
@@ -52,6 +57,21 @@ public class SpringStringUtilsDeleteAnyBenchmark {
 			if (charsToDelete.indexOf(c) == -1) {
 				result[lastCharIndex++] = c;
 			}
+		}
+		return new String(result, 0, lastCharIndex);
+	}
+
+	private static String deleteAnyPatchedSkipNewStringWhenNothingDeleted(String inString, String charsToDelete) {
+		int lastCharIndex = 0;
+		char[] result = new char[inString.length()];
+		for (int i = 0; i < inString.length(); i++) {
+			char c = inString.charAt(i);
+			if (charsToDelete.indexOf(c) == -1) {
+				result[lastCharIndex++] = c;
+			}
+		}
+		if (lastCharIndex == inString.length()) {
+			return inString;
 		}
 		return new String(result, 0, lastCharIndex);
 	}
