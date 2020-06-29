@@ -30,5 +30,5 @@ jmh {
 	warmupIterations = 1
 	iterations = 1
 	profilers = ['gc']
-	include = ['com.izeye.samples.jmh.SpringStringUtilsDeleteAnyBenchmark']
+	include = ['com.izeye.samples.jmh.VolatileFieldDefaultBenchmark']
 }
