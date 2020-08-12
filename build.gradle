@@ -33,5 +33,5 @@ jmh {
 	warmupIterations = 1
 	iterations = 1
 	profilers = ['gc']
-	include = ['com.izeye.samples.jmh.SingleCharStringEqualsBenchmark']
+	include = ['com.izeye.samples.jmh.StringRegionMatchesBenchmark']
 }
