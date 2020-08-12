@@ -13,8 +13,8 @@ repositories {
 }
 
 dependencies {
-	jmh 'org.openjdk.jmh:jmh-core:latest.release'
-	jmh 'org.openjdk.jmh:jmh-generator-annprocess:latest.release'
+	jmh 'org.openjdk.jmh:jmh-core:1.24'
+	jmh 'org.openjdk.jmh:jmh-generator-annprocess:1.24'
 	
 	jmh 'org.springframework:spring-core:5.1.5.RELEASE'
 
