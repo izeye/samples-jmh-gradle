@@ -13,8 +13,11 @@ repositories {
 }
 
 dependencies {
-	jmh 'org.openjdk.jmh:jmh-core:latest.release'
-	jmh 'org.openjdk.jmh:jmh-generator-annprocess:latest.release'
+	// FIXME: See https://github.com/melix/jmh-gradle-plugin/issues/172
+//	jmh 'org.openjdk.jmh:jmh-core:latest.release'
+//	jmh 'org.openjdk.jmh:jmh-generator-annprocess:latest.release'
+	jmh 'org.openjdk.jmh:jmh-core:1.23'
+	jmh 'org.openjdk.jmh:jmh-generator-annprocess:1.23'
 	
 	jmh 'org.springframework:spring-core:5.1.5.RELEASE'
 
