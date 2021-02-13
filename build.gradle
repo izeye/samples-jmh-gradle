@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-	id "me.champeau.gradle.jmh" version "0.5.0"
+	id "me.champeau.gradle.jmh" version "0.5.3"
 }
 
 group 'com.izeye.samples'
@@ -13,12 +13,9 @@ repositories {
 }
 
 dependencies {
-	// FIXME: See https://github.com/melix/jmh-gradle-plugin/issues/172
-//	jmh 'org.openjdk.jmh:jmh-core:latest.release'
-//	jmh 'org.openjdk.jmh:jmh-generator-annprocess:latest.release'
-	jmh 'org.openjdk.jmh:jmh-core:1.23'
-	jmh 'org.openjdk.jmh:jmh-generator-annprocess:1.23'
-	
+	jmh 'org.openjdk.jmh:jmh-core:latest.release'
+	jmh 'org.openjdk.jmh:jmh-generator-annprocess:latest.release'
+
 	jmh 'org.springframework:spring-core:5.1.5.RELEASE'
 
 	testCompile group: 'junit', name: 'junit', version: '4.12'
