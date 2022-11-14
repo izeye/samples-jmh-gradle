@@ -30,5 +30,5 @@ jmh {
 	warmupIterations = 1
 	iterations = 1
 	profilers = ['gc']
-	includes = ['com.izeye.samples.jmh.StringBuilderAppendBenchmark']
+	includes = ['com.izeye.samples.jmh.EnumMapOfBenchmark']
 }
